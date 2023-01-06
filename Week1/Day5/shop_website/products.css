@@ -1,0 +1,118 @@
+body {
+    background-color: burlywood;
+}
+
+img {
+    height: 500px;
+    width: 400px;
+}
+
+.red, .green {
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+
+.new, .sale {
+    color: black;
+    font-weight: bold;
+}
+
+.new {
+    display: inline-block;
+    position: absolute;
+    bottom: 480px;
+    left: 25px;
+}
+
+.sale {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: 467px;
+    left: 323px;
+}
+
+.red {
+    display: inline-block;
+    position: absolute;
+    right: 320px;
+    top: 30px;
+}
+
+.green {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+
+}
+ul {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    position: absolute;
+}
+
+.info {
+    display: inline-block;
+    width: 200px;
+    top: 500px;
+    left: 170px;
+}
+
+.descrptn {
+    font-size: 20px;
+    font-weight: bold;
+}
+.price_one {
+    color: aqua;
+    display: inline-block;
+    position: relative;
+    left: 30px;
+}
+
+.price_two {
+    display: inline-block;
+    position: absolute;
+    text-decoration: line-through;
+    font-size: 12px;
+    color: grey;
+    left: 90px;
+    top: 66px;
+}
+
+button {
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+}
+.item_two {
+    display: inline-block;
+    position: absolute;
+    left: 700px;
+}
+
+.item_three {
+    display: inline-block;
+    position: absolute;
+    left: 1400px;
+}
+
+.second_row {
+    display: inline-block;
+    position: absolute;
+    top: 700px;
+}
+
+.third_row {
+    display: inline-block;
+    position: absolute;
+    top: 1400px;
+
+}

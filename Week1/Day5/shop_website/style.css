@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 30px;
+    background: black;
+
+}
+
+
+li {
+    display: inline;
+    color: white;
+}
+
+.icon {
+    font-size: 35px;
+}
+
+.text{
+    position: absolute;
+    left: 90%;
+    font-size: 20px;
+    top: 45px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 0;
+}

@@ -32,7 +32,6 @@ li a{
     display: block;
     color: white;
     text-align: center;
-    /*padding: 14px 16px;*/
     text-decoration: none;
     font-weight: bold;
     font-size: 45px;
@@ -48,9 +47,63 @@ li a:hover{
     bottom: 10px;
 }
 
-.header{
-    font-size: 110px;
-    font-weight: bolder;
+
+@media screen and (min-width: 600px) {
+    .header {
+        font-size: 35px;
+    }
+
+    ul {
+        background-color: yellow;
+
+    }
+
+    li a {
+        color: black;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        font-size: 25px;
+    }
+    ul {
+        background-color: lightgreen;
+
+    }
+    li a {
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header{
+        font-size: 110px;
+        font-weight: bolder;
+        display: inline;
+        position: absolute;
+        top: 150px;
+        left: 450px;
+    }
+    ul {
+        background-color: red;
+        }
+
+    li a {
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+        ul {
+        background-color: black;
+
+    }
+    li a {
+        color: white;
+    }
 }
 
 .bio{

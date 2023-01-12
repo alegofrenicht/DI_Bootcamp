@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <style type="text/css">
+           .col > div {
+               background:#676470;
+               width:483px;
+               height:298px;
+               transition:all 0.3s ease;
+         }
+
+         .col {
+             display: flex;
+             flex-direction: column;
+             flex-wrap: wrap;
+             align-content: space-evenly;
+             align-items: center;
+             text-align: center;
+         }
+
+         .fade {
+             border: 10px solid white;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+        opacity:0.5;
+         }
+
+        .fade:hover {
+            opacity:1;
+        }
+
+        .color {
+            border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .color:hover
+        {
+            background:#53a7ea;
+        }
+
+        .grow {
+                border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+
+        }
+        .grow:hover {
+            transform: scale(1.3);
+        }
+
+        .rotate {
+                 border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .rotate:hover {
+            transform: rotateZ(-30deg);
+        }
+
+        .circle {
+                  border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+        .circle:hover {
+        border-radius:50%;
+        }
+
+        .threed {
+                  border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+
+        .threed:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        transform: translateX(-3px);
+}
+
+        .swing {
+                  border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+
+        @keyframes swing
+        {
+            15%
+            {
+                transform: translateX(5px);
+            }
+            30%
+            {
+
+                transform: translateX(-5px);
+            }
+            50%
+            {
+
+                transform: translateX(3px);
+            }
+            65%
+            {
+                transform: translateX(-3px);
+            }
+            80%
+            {
+                transform: translateX(2px);
+            }
+            100%
+            {
+                transform: translateX(0);
+            }
+        }
+
+        .swing:hover {
+        animation: swing 1s ease;
+        animation-iteration-count: 1;
+}
+
+        .border {
+                  border: 10px solid white;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+        }
+
+        .border:hover {
+        box-shadow: inset 0 0 0 25px #53a7ea;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <div class="fade">one</div>
+            <div class="color">two</div>
+            <div class="grow">three</div>
+            <div class="rotate">four</div>
+            <div class="circle">five</div>
+            <div class="threed">six</div>
+            <div class="swing">seven</div>
+            <div class="border">eight</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    background: url("imgs/photo-1557682250-33bd709cbe85.jpg");
+    background-size: 120%;
+}
+
+.main{
+    font-family: 'Seymour One', sans-serif;
+    display: block;
+    position: absolute;
+    padding-right: 500px;
+    padding-bottom: 550px;
+    background-color: #FBFBF8 ;
+}
+
+.header{
+    font-size: 45px;
+    display: flex;
+    position: relative;
+    left: 370px;
+    top: 100px;
+}
+
+.entryforms{
+    display: flex;
+    position: relative;
+    left: 230px;
+    top: 100px;
+}
+
+.entryforms input {
+    width: 475px;
+    height: 33px;
+    background: #EDEDEB;
+    border-style: none;
+    font-size: 15px;
+}
+
+.bottom {
+    display: inline-block;
+    position: absolute;
+    bottom: 635px;
+    left: 227px;
+    font-size: 15px;
+    color: #41413E;
+}
+
+.optionforms span{
+    display: inline-block;
+    position: relative;
+    top: 135px;
+    left: 500px;
+}
+
+a{
+    text-decoration: none;
+    color: #41413E;
+}
+
+a:hover{
+    text-transform: uppercase;
+    color: black;
+}
+
+.enter {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    top: 280px;
+    left: 230px;
+    width: 475px;
+}
+
+button {
+    width: 475px;
+    height: 40px;
+    border-style: none;
+    background-color: darkviolet;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover{
+    color: black;
+
+}
+
+button a{
+    color: white;
+}
+.enter p{
+    display: flex;
+    position: relative;
+    top: 20px;
+    left: 145px;
+    color: #41413E;
+}
+
+.networks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-between;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+li{
+    display: flex;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+li img{
+    width: 40px;
+    height: 40px;
+}
+
+footer{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    top: 450px;
+}
+
+.reglayout {
+    display: block;
+    position: absolute;
+    left: 1000px;
+    top: 250px;
+    font-size: 35px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Seymour One', sans-serif;
+}
+
+.reglayout p{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+i {
+    font-size: 30px;
+}
+
+/*.user_logo{*/
+/*    width: 250px;*/
+/*}*/
+
+.fa-person-circle-plus {
+    font-size: 200px;
+}
+
+/*.arrow_logo{*/
+/*    width: 30px;*/
+/*}*/
+
+.reglayout button{
+    font-size: 30px;
+    border: white solid;
+    border-radius: 15px;
+    background: none;
+    height: 50px;
+}
+

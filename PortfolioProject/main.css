@@ -1,0 +1,62 @@
+body {
+    margin: auto 0;
+    padding: 0;
+}
+
+
+html,h1,h2,h3,h4,h5,h6,a {
+    font-family: 'Merriweather', serif;
+    color: orangered;
+
+}
+
+p {
+    font-family: 'Merriweather', serif;
+}
+
+.main {
+    /*background-image: url("images/headerback.jpg");*/
+    display: flex;
+}
+
+.box {
+    height: 50vh;
+    display: inline;
+    position: absolute;
+    top: 30vh;
+    /*flex-direction: column;*/
+    width: 40%;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    /*align-items: center;*/
+}
+
+.about_me_img {
+    height: 30vh ;
+    width: 30vh;
+    border-radius: 50%;
+}
+
+.lft_part {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.col_prtfl {
+    display: flex;
+    justify-content: center;
+}
+
+.col-blog {
+    border: 1px solid grey;
+    /*box-shadow: 1px 1px 1px 1px black;*/
+}
+
+.team {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}

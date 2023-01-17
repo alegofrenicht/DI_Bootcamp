@@ -14,6 +14,14 @@ p {
     font-family: 'Merriweather', serif;
 }
 
+.nav-link:hover {
+       box-shadow:
+                1px 1px black,
+                2px 2px black,
+                3px 3px black;
+        transform: translateX(-3px);
+}
+
 .main {
     /*background-image: url("images/headerback.jpg");*/
     display: flex;
@@ -50,13 +58,29 @@ p {
     justify-content: center;
 }
 
+.col_prtfl:hover {
+    transform: scale(1.1)
+}
+
 .col-blog {
     border: 1px solid grey;
     /*box-shadow: 1px 1px 1px 1px black;*/
+}
+
+.read a:hover {
+    opacity: 0.5;
 }
 
 .team {
     width: 90%;
     display: flex;
     justify-content: center;
+}
+
+.contacts_links a:hover {
+    transform: scale(1.1);
+}
+
+.d-grid button:hover {
+    background: #4096ee;
 }

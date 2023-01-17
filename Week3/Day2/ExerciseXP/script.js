@@ -8,8 +8,8 @@
 console.log('Exercise 1 !!!!!!!!!!!!!!!!!!!!1')
 let favourite_food = "spaghetti"
 let favourite_meal = "breakfast"
-console.log('I eat', favourite_food, 'at every', favourite_meal)
-console.log('I eat ${favourite_food} at every ${favourite_meal}')
+console.log(`I eat ${favourite_food} at every ${favourite_meal}`)
+
 
 //  Exercise 2 : Series
 // Instructions
@@ -26,9 +26,7 @@ console.log('I eat ${favourite_food} at every ${favourite_meal}')
 console.log('Exercise 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"]
 let myWatchedSeriesLength = myWatchedSeries.length
-let myWatchedSeriesSentence = myWatchedSeries[0] + ', ' + myWatchedSeries[1] + ', and ' + myWatchedSeries[2]
-let result = 'I watched ' + myWatchedSeriesLength + ' series : ' + myWatchedSeriesSentence
-console.log(result)
+console.log(`I watched ${myWatchedSeriesLength} series: ${myWatchedSeries[0]}, ${myWatchedSeries[1]}, and ${myWatchedSeries[2]}`)
 
 // Part II
 // Change the series “the big bang theory” to “friends”. Hint : You will need to use the index of “the big bang theory” series.
@@ -55,7 +53,8 @@ console.log(myWatchedSeries)
 console.log('Exercise 3 !!!!!!!!!!!!!!!!!!!!!!!!!')
 let celsius_temp = 15
 let farenheit_temp = celsius_temp / 5 * 9 + 32
-console.log(celsius_temp.toString(), '\u00B0C is', farenheit_temp.toString(), '\u00B0F')
+// console.log(celsius_temp.toString(), '\u00B0C is', farenheit_temp.toString(), '\u00B0F')
+console.log(`${celsius_temp} \u00B0C is ${farenheit_temp} \u00B0F.`)
 
 // Exercise 4 : Guess The Answers #1
 // Instructions

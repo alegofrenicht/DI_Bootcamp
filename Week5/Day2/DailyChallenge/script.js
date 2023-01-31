@@ -24,7 +24,7 @@ function sub(e){
     for (let input of inputs){
         let val = input.value
         if (val.length < 1){
-            alert('blank line!')
+            return alert('blank line!')
         } else{
             allWords.push(val)
         }

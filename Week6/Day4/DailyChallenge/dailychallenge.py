@@ -34,7 +34,15 @@ print(numbers)
 # Final strings won’t include words with double letters (e.g. “passing”, “lottery”).
 
 string = input('enter your word:\n')
-string = ''.join(sorted(set(string), key=string.index))
-print(string)
 
+for i in range(len(string) - 1):
+    if string[i] == string[i + 1]:
+        string = string.replace(string[i], ' ', 1)
+print(''.join(string.split(' ')))
+
+# or another a little more sophisticated solution:
+
+# string = input('enter your word:\n')
+# string = ''.join(sorted(set(string), key=string.index))
+# print(string)
 

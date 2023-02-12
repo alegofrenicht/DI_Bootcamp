@@ -30,3 +30,5 @@ new_string = ''
 for letter in str_input:
     new_string += letter
     print(new_string)
+
+    

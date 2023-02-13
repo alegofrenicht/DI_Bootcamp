@@ -49,7 +49,7 @@ print(f'I have a {computer_brand} computer')
 name = 'alex'
 age = '28'
 shoe_size = '46'
-info = f'I\'m {name}, I\'m {age} years old and my shoe size is {shoe_size}'
+info = f'I\'m {name}, I\'m {age} years old and my shoe size is {shoe_size}' 
 print(info)
 
 
@@ -67,7 +67,7 @@ if a > b:
 #
 # Exercise 7 : Odd Or Even
 # Instructions
-# Write code that asks the user for a number and determines whether this number is odd or even.
+# Write code that asks the user for a number and determines whether this number is odd or even. 
 
 quest = int(input('Choose a number: '))
 

@@ -28,5 +28,8 @@ for x in range(3):
     for y in range(8):
         if matrix[y][x].isalpha():
             message += matrix[y][x]
+        elif not matrix[y][x].isalpha() and matrix[y - 1][x].isalpha():
+            message += ' '
 
-print(message)
+
+print(message.strip())

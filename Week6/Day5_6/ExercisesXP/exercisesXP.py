@@ -36,7 +36,7 @@ for key, value in zip(keys, values):
 family = {}
 while True:
     name = input('Say your names, please\n')
-    if name == 'that\'s all':
+    if name == 'that\'s all': # here you can use double quotes then it will be: "that's all" 
         break
     age = int(input('and age\n'))
     if name == 'that\'s all':
@@ -46,7 +46,7 @@ while True:
 
 cost = 0
 for member in family.values():
-    if member < 3:
+    if member < 3: # it redundant, you can remove this if condition
         continue
     elif 3 <= member <= 12:
         cost += 10
@@ -187,5 +187,5 @@ for key, value in enumerate(users):
         disney_users_A[value] = key
     elif value.lower().startswith('m') or value.lower().startswith('p'):
         disney_users_A[value] = key
-    else:
+    else: # this else is redundant
         continue

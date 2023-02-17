@@ -8,4 +8,7 @@
 # Then, the output should be: bag,hello,without,world
 
 sequence = input('enter line of words separated with commas:\n')
-print(','.join(sorted(sequence.split(','))))
+print(','.join([word for word in sorted(sequence.split(','))]))
+
+# simplier way
+# print(','.join(sorted(sequence.split(','))))

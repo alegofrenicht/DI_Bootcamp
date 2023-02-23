@@ -20,7 +20,7 @@ class Game:
         self.__computer = choice(self.items)
         return self.__computer
 
-    def __get_game_result(self, user_item, computer_item):
+      def __get_game_result(self, user_item, computer_item):
         if user_item == computer_item:
             self.__game_result = 'Draw'
             return self.__game_result

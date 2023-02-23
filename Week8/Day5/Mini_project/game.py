@@ -24,26 +24,26 @@ class Game:
         if user_item == computer_item:
             self.__game_result = 'Draw'
             return self.__game_result
-        else:
+        else: # this else is redundant please remove it because we do return at the if statment
             if user_item == 'rock':
                 if computer_item == 'scissors':
                     self.__game_result = 'Win'
                     return self.__game_result
-                else:
+                else: #this else is redundant
                     self.__game_result = 'Loss'
                     return self.__game_result
-            elif user_item == 'paper':
+            elif user_item == 'paper': # you can change it to if rather than elif because we do a return at the if
                 if computer_item == 'rock':
                     self.__game_result = 'Win'
                     return self.__game_result
-                else:
+                else: # this else is redundant
                     self.__game_result = 'Loss'
                     return self.__game_result
-            else:
+            else: # this else is redundant
                 if computer_item == 'paper':
                     self.__game_result = 'Win'
                     return self.__game_result
-                else:
+                else: # this else is redundant
                     self.__game_result = 'Loss'
                     return self.__game_result
 

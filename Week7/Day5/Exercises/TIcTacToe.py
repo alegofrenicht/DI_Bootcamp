@@ -8,7 +8,7 @@ def play():
         counter = 1
         gui_list = []
 
-
+        # why you define the function as nested
         def display_board():
             decoration_element = [' ', '-']
             print('TIC TAC TOE')
@@ -77,6 +77,7 @@ def play():
 
                 print('', end='\n')
 
+    # split each code into functions, like is_win_by_row, is_win_by_column, etc... 
 
         def check_win(board, symbol):
             if board[1][2] == symbol and board[1][6] == symbol and board[1][10] == symbol:

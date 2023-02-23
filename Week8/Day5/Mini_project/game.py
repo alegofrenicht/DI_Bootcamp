@@ -28,7 +28,7 @@ class Game:
             if user_item == 'rock':
                 if computer_item == 'scissors':
                     self.__game_result = 'Win'
-                    return self.__game_result
+                    return self.__game_result 
                 else: #this else is redundant
                     self.__game_result = 'Loss'
                     return self.__game_result

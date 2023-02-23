@@ -20,32 +20,27 @@ class Game:
         self.__computer = choice(self.items)
         return self.__computer
 
-    def __get_game_result(self, user_item, computer_item):
+      def __get_game_result(self, user_item, computer_item):
         if user_item == computer_item:
             self.__game_result = 'Draw'
             return self.__game_result
-        else: # this else is redundant please remove it because we do return at the if statment
-            if user_item == 'rock':
-                if computer_item == 'scissors':
-                    self.__game_result = 'Win'
-                    return self.__game_result 
-                else: #this else is redundant
-                    self.__game_result = 'Loss'
-                    return self.__game_result
-            elif user_item == 'paper': # you can change it to if rather than elif because we do a return at the if
-                if computer_item == 'rock':
-                    self.__game_result = 'Win'
-                    return self.__game_result
-                else: # this else is redundant
-                    self.__game_result = 'Loss'
-                    return self.__game_result
-            else: # this else is redundant
-                if computer_item == 'paper':
-                    self.__game_result = 'Win'
-                    return self.__game_result
-                else: # this else is redundant
-                    self.__game_result = 'Loss'
-                    return self.__game_result
+        if user_item == 'rock':
+            if computer_item == 'scissors':
+                self.__game_result = 'Win'
+                return self.__game_result
+            self.__game_result = 'Loss'
+            return self.__game_result
+        if user_item == 'paper':
+            if computer_item == 'rock':
+                self.__game_result = 'Win'
+                return self.__game_result
+            self.__game_result = 'Loss'
+            return self.__game_result
+        if computer_item == 'paper':
+            self.__game_result = 'Win'
+            return self.__game_result
+        self.__game_result = 'Loss'
+        return self.__game_result
 
 
     def play(self):

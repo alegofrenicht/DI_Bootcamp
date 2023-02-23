@@ -13,13 +13,13 @@
 #
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 
-# word = input('write a word:\n')
-# voc = {}
-# for index, letter in enumerate(word):
-#     if letter in voc:
-#         voc[letter].append(index)
-#     else:
-#         voc[letter] = [index]
+word = input('write a word:\n')
+voc = {}
+for index, letter in enumerate(word):
+    if letter in voc:
+        voc[letter].append(index)
+    else:
+        voc[letter] = [index]
 
 
 # Challenge 2

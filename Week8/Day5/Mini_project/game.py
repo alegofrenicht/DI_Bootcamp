@@ -24,28 +24,23 @@ class Game:
         if user_item == computer_item:
             self.__game_result = 'Draw'
             return self.__game_result
-        else:
-            if user_item == 'rock':
-                if computer_item == 'scissors':
-                    self.__game_result = 'Win'
-                    return self.__game_result
-                else:
-                    self.__game_result = 'Loss'
-                    return self.__game_result
-            elif user_item == 'paper':
-                if computer_item == 'rock':
-                    self.__game_result = 'Win'
-                    return self.__game_result
-                else:
-                    self.__game_result = 'Loss'
-                    return self.__game_result
-            else:
-                if computer_item == 'paper':
-                    self.__game_result = 'Win'
-                    return self.__game_result
-                else:
-                    self.__game_result = 'Loss'
-                    return self.__game_result
+        if user_item == 'rock':
+            if computer_item == 'scissors':
+                self.__game_result = 'Win'
+                return self.__game_result
+            self.__game_result = 'Loss'
+            return self.__game_result
+        if user_item == 'paper':
+            if computer_item == 'rock':
+                self.__game_result = 'Win'
+                return self.__game_result
+            self.__game_result = 'Loss'
+            return self.__game_result
+        if computer_item == 'paper':
+            self.__game_result = 'Win'
+            return self.__game_result
+        self.__game_result = 'Loss'
+        return self.__game_result
 
 
     def play(self):

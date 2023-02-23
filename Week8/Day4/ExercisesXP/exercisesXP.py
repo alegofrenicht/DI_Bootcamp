@@ -66,8 +66,8 @@ class Dog:
     def fight(self, other_dog):
         if other_dog.run_speed() * other_dog.weight > self.weight * self.run_speed():
             return f"{other_dog.name} is the winner"
-        else:
-            return f"{self.name} is the winner"
+
+        return f"{self.name} is the winner"
 
 dog_one = Dog('One', 2, 15)
 dog_two = Dog('Two', 1, 25)

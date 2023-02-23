@@ -27,8 +27,7 @@ class Family:
     def is_18(self, family_member):
         if family_member['age'] >= 18:
             return True
-        else:
-            return False
+        return False
 
 
     def family_presentation(self):
@@ -39,8 +38,7 @@ class Family:
                 if name == self.members[-1]:
                     print('.')
                     break
-                else:
-                    print(', ', end='')
+                print(', ', end='')
 
 
 members = [

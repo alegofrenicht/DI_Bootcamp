@@ -4,17 +4,15 @@ class Farm:
         self.animals = {}
 
     def add_animal(self, animal, number=1):
-        if animal in self.animals:
-            self.animals[animal] += 1
-        else:
-            self.animals[animal] = number
+        self.animals[animal] = self.animals.get(animal, 0) + number
+
 
 
 
     def get_info(self):
         print(f"{self.name}' farm\n")
         [print(f"{key} : {value}") for key, value in self.animals.items()]
-        return '\n    E-I-E-I-0!'
+        return '\n\tE-I-E-I-0!'
 
     def get_animal_types(self):
         animal_types = []
@@ -33,3 +31,4 @@ macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
 print(macdonald.get_info())
+print(macdonald.get_short_info())

@@ -49,7 +49,7 @@ print(f'I have a {computer_brand} computer')
 name = 'alex'
 age = '28'
 shoe_size = '46'
-info = f'I\'m {name}, I\'m {age} years old and my shoe size is {shoe_size}'
+info = f"I'm {name}, I'm {age} years old and my shoe size is {shoe_size}"
 print(info)
 
 
@@ -72,7 +72,7 @@ if a > b:
 quest = int(input('Choose a number: '))
 
 if quest % 2 == 0:
-    print('it\'s even')
+    print("it's even")
 else:
     print('it\'s odd')
 

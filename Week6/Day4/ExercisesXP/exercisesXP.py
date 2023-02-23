@@ -120,10 +120,9 @@ print('I\'ll add that topping to your pizza.')
 while toppings_query != 'quit':
     toppings_query = input('What toppings you would like to have on your pizza? ')
     if toppings_query == 'quit':
-        continue # it's redundant
-    else:
-        print('I\'ll add that topping to your pizza.') # you can change it and use double quotes then there is no need for the I\'ll
-        toppings_list.append(toppings_query)
+        break
+    print('I\'ll add that topping to your pizza.')
+    toppings_list.append(toppings_query)
 
 toppings = ' and '.join(toppings_list)
 print(f'Your pizza with {toppings} will cost {10 + len(toppings_list) * 2.5}')
@@ -149,7 +148,7 @@ group = int(input('How many persons are you?\n'))
 for member in range(group):
     question = int(input('How old are you?\n'))
     if question < 3:
-        continue # it's redundant, you can remove all this if check
+        continue
     elif 3 <= question <= 12:
         cost += 10
     else:

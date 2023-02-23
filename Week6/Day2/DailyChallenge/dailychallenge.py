@@ -22,8 +22,9 @@ import random
 str_input = input('write string ')
 if len(str_input) > 10:
     print('string too long')
-else:
+elif len(str_input) < 10:
     print('string not long enough')
+
 
 print(str_input[0], str_input[-1])
 new_string = ''

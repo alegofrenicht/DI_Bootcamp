@@ -20,6 +20,7 @@ class Pagination:
             print("text's ended")
         else:
             self.currentPage += self.pageSize
+            return self
 
     def prevPage(self):
         if self.currentPage == 0:
@@ -71,7 +72,6 @@ print(page.getVisibleItems())
 page.lastPage()
 
 print(page.getVisibleItems())
-
 
 
 

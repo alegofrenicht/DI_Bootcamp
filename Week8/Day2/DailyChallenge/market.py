@@ -3,7 +3,7 @@ class Farm:
         self.name = name
         self.animals = {}
 
-    def add_animal(self, animal, number=1):
+    def add_animal(self, animal, number=1): # you can make this function in just a single line: self.animals[animal] = self.animals.get(animal, 0) + number
         if animal in self.animals:
             self.animals[animal] += 1
         else:
@@ -14,7 +14,7 @@ class Farm:
     def get_info(self):
         print(f"{self.name}' farm\n")
         [print(f"{key} : {value}") for key, value in self.animals.items()]
-        return '\n    E-I-E-I-0!'
+        return '\n    E-I-E-I-0!' # you can use \t rather than the spaces
 
     def get_animal_types(self):
         animal_types = []

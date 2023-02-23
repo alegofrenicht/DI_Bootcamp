@@ -66,7 +66,7 @@ class Dog:
     def fight(self, other_dog):
         if other_dog.run_speed() * other_dog.weight > self.weight * self.run_speed():
             return f"{other_dog.name} is the winner"
-        else:
+        else: # this else is redundant because we are doing return at the if
             return f"{self.name} is the winner"
 
 dog_one = Dog('One', 2, 15)

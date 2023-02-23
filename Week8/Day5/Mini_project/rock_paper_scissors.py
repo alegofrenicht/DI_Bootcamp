@@ -11,8 +11,11 @@ def get_user_menu_choice():
 
 
 def print_results(results):
-    for result, number in results.items():
-        print(f"{result}: {number}")
+    if len(results) == 0:
+        print(f"You haven't played yet")
+    else:
+        for result, number in results.items():
+            print(f"{result}: {number}")
 
 
 def main():

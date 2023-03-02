@@ -21,6 +21,7 @@ class Door:
     def __str__(self):
         print(f"Door number {self.id}")
     def can_go_to(self, other_door):
+        # try to simplify the function by dividing it to small functions
         if other_door.locked:
             self.next.append(f"Door {other_door.id}")
             print(f'You entered door number {other_door.id}')

@@ -70,15 +70,15 @@ console.log('Exercise 3')
 // Instructions
 // 1. Prompt the user for a number.
 //    Hint : Check the data type you receive from the prompt (ie. Use the typeof method)
-// let num_prompt = Number(prompt('Enter a number: '))
-// console.log(num_prompt)
+let num_prompt = Number(prompt('Enter a number: '))
+console.log(num_prompt)
 // 2. While the number is smaller than 10 continue asking the user for a new number.
 //    Tip : Which while loop is more relevant for this situation?
 
 // let num = 0
-// while (num < 10){
-//     num = Number(prompt('Enter a number: '))
-// }
+while (num < 10){
+    num = Number(prompt('Enter a number: '))
+}
 
 // 🌟 Exercise 4 : Building Management
 console.log('Exercise 4')

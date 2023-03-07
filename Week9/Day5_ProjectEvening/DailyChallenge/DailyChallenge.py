@@ -1,6 +1,7 @@
 import datetime
 
 
+
 class Airline:
     def __init__(self, id: str, name: str):
         self.id = id
@@ -9,22 +10,30 @@ class Airline:
 
 
 class Airplane:
-    def __init__(self, id: int, company):
-        self.id = id
+    def __init__(self, id_plane: int, company):
+        self.id = id_plane
         self.company = company
         self.next_flights = []
 
-    def fly(self, destination):
+    def fly(self, flight):
+        self.next_flights.append(flight)
 
 
     def location_on_date(self, date):
+        for flight in self.next_flights:
+            if date == flight.date:
+                return flight.destination
+
 
     def available_on_date(self, date, location):
+        return self.location_on_date(date) == location
+
+
 
 
 class Flight:
-    def __init__(self, destination, origin, plane):
-        self.date = datetime.date
+    def __init__(self, destination, origin, plane, date):
+        self.date = datetime.datetime.strptime(date, "%d/%m/%Y")
         self.destination = destination
         self.origin = origin
         self.plane = plane
@@ -38,8 +47,8 @@ class Flight:
 
 
 class Airport:
-    def __init__(self):
-        self.city = None
+    def __init__(self, city):
+        self.city = city
         self.planes = []
         self.scheduled_departures = []
         self.scheduled_arrivals = []

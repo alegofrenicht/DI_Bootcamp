@@ -27,12 +27,7 @@ class Family:
     def is_18(self, family_member):
         if family_member['age'] >= 18:
             return True
-<<<<<<< HEAD
         return False
-=======
-        else: # this else is redundant
-            return False
->>>>>>> 1c7832b0b672dec7a3f405a80c13fee860c2e18a
 
 
     def family_presentation(self):
@@ -43,12 +38,7 @@ class Family:
                 if name == self.members[-1]:
                     print('.')
                     break
-<<<<<<< HEAD
                 print(', ', end='')
-=======
-                else: # this else is redundant
-                    print(', ', end='')
->>>>>>> 1c7832b0b672dec7a3f405a80c13fee860c2e18a
 
 
 members = [
@@ -86,7 +76,7 @@ class TheIncredibles(Family):
     def use_power(self, member):
         if member['age'] >= 18:
             print(f"{member['name']} has {member['power']}")
-        else: # this else is redundant
+        else:
             raise Exception('Member of the family is not old enough')
 
     def incredible_presentation(self):

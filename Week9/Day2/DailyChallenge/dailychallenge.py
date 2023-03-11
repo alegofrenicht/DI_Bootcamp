@@ -21,7 +21,7 @@ class Circle:
     def __init__(self, type_of_parameter, value):
         self.type = type_of_parameter
         self.value = value
-        if self.type == 'radius':
+        if self.type == 'radius': # rather than this think how we can solve this using the classmethod
             self.radius = self.value
             self.diameter = self.value * 2
         elif self.type == 'diameter':

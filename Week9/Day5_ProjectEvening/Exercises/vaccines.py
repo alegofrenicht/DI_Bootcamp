@@ -63,7 +63,7 @@ class Human:
         self.blood_type = blood_type
         self.family = []
 
-    def add_family_member(self, person):
+    def add_family_member(self, person): # there is a bug at this function, le'ts say that we have the following: member A, B, C for A his family member is B and we add C as family member to A then we need to add it also to B
         # if person not in self.family:
         self.family.append(person)
         # if self not in person.family:
@@ -86,7 +86,7 @@ class Queue:
             if human.name == person or human.id_number == person:
                 return number
 
-    def swap(self, person1, person2):
+    def swap(self, person1, person2): # think for a more simple solution
         first_pers = [[human, num] for num, human in enumerate(self.humans) if
                       person1 == human.name or person1 == human.id_number]
         sec_pers = [[human, num] for num, human in enumerate(self.humans) if

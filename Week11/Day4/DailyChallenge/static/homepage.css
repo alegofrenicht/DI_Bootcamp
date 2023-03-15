@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-image: url("perfect-blue3.jpg");
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #9C1A1C;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.colors {
+    font-size: 20px;
+    margin: 0;
+    width: 15%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}

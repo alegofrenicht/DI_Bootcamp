@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/homepage.css">
+</head>
+<body>
+    <nav>
+        <ul class="colors">
+            <li>
+                <a href='{{url_for("colors", color="blue")}}'>blue</a>
+            </li>
+            <li>
+                <a href='{{url_for("colors", color="red")}}'>red</a>
+            </li>
+            <li>
+                <a href='{{url_for("colors", color="green")}}'>green</a>
+            </li>
+            <li>
+                <a href='{{url_for("colors", color="yellow")}}'>yellow</a>
+            </li>
+        </ul>
+    </nav>
+    {% block my_block %}{% endblock %}
+</body>
+</html>

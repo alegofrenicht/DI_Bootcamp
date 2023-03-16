@@ -14,7 +14,7 @@ def home_page():
 def lesson():
     with open('in-this-chapter.md') as ch:
         md = ch.read()
-        html = markdown.markdown(md)
+        html = markdown.markdown(md) # there is no need for a new variable you can just do return markdown.markdown(md)
     return html
 
 

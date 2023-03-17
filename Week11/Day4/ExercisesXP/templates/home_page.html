@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'main_template.html' %}
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+{% block front_big%}Welcome to Tech Market{% endblock%}
+{% block front_small %}The fastest growing online retailer in the west{% endblock %}
+{% block main%}
+    <div class="p-5">
+        <h2 class="mb-3 mt-4 ms-5" style="font-size: 7vh">About</h2>
+        <p class="mb-3 mt-4 ms-5" style="font-size: 2vh">We supply a wide range of tech products and accessories for our clients all over the world</p>
+    </div>
+    <div id='list_one'>
+        <ul class="mb-3 mt-4 ms-5">
+            <li>Laptops</li>
+            <li>Computers</li>
+            <li>Phones</li>
+        </ul>
+        <ul class="mb-3 mt-4 ms-5">
+            <li>Audio Equipment</li>
+            <li>HD Monitors</li>
+            <li>Wireless Routers</li>
+        </ul>
+    </div>
+    <a class="btn btn-primary mt-5" style="width: 100%" href="{{url_for('products_page')}}">Check Out Our Products</a>
+{% endblock %}
+
+</body>
+</html>

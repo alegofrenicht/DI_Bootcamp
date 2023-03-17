@@ -1,0 +1,21 @@
+body > #list_one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    font-size: 20px;
+}
+
+body > #chars {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+body > #prod_chars {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}

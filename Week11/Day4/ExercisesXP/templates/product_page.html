@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'main_template.html' %}
+    <title>{% block title%}{{product['ProductId']}}{% endblock %}</title>
+</head>
+<body>
+    {% block front_big %}{{product['Name']}}{% endblock %}
+    {% block front_small %}
+        {% if product['Quantity'] > 0 %}
+            <div class="bg ms-5 mt-5" style="background-color: lightgreen">
+                <p class="ms-5" style="font-size: 3vh">The product is currently available. Order while stocks last!</p>
+            </div>
+        {% else %}
+              <div class="bg ms-5 mt-5" style="background-color: lightpink">
+                <p class="ms-5" style="font-size: 3vh">Sorry - this product is currently out of stock</p>
+            </div>
+        {% endif %}
+    {% endblock %}
+    {% block main %}
+        <div class="bg-light mt-5">
+             <h3 class="ms-5">Product Details</h3>
+         </div>
+        {% for chars in product %}
+            <div id="chars">
+                <p class="mt-5 ms-5" style="width: 200px">
+                    {{chars}}
+                </p>
+                <p class="mt-5 ms-5">
+                    {{product[chars]}}
+                </p>
+            </div>
+        {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

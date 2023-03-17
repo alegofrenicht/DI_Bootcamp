@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'main_template.html' %}
+    <title>{% block title%}Our Products{% endblock %}</title>
+</head>
+<body>
+    {% block front_big %}Tech Market Products{% endblock %}
+    {% block front_small %}Browse our extensive range of tech products{% endblock %}
+    {% block main %}
+        {% for product in products %}
+            <div class="bg-light mt-5">
+                <h3 class="ms-5"> {{product['Name']}}</h3>
+            </div>
+            <div class="mt-5 ms-5">
+                <h4>{{product["ProductId"]}}</h4>
+                <p>{{product['Description']}}</p>
+                <p>Price: {{product['Price']}} {{product['CurrencyCode']}}</p>
+                <a class="btn btn-primary" href="{{url_for('product_details', product_id=product['ProductId'])}}" style="text-decoration: none;  list-style: none" >More details</a>
+            </div>
+        {% endfor %}
+    {% endblock%}
+
+</body>
+</html>

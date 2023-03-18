@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title %}Products{% endblock %}</title>
+</head>
+<body>
+    {% block jumbotron%}
+         <div class="products p-5 bg-light ">
+            <h1 class="mb-3 mt-4 ms-4" style="font-size: 10vh">WELCOME TO NEW ERA</h1>
+            <p class="mb-3 mt-5 ms-5" style="font-size: 3vh">AR Electronics will save you from technological apocalypse</p>
+        </div>
+    {% endblock %}
+    {% block main %}
+             <h2 class="mb-3 mt-4 ms-5" style="font-size: 6vh; color: white">Products</h2>
+        {% for product in products %}
+              <div class="p-3 bg-light mt-5" style="border-style: solid">
+                  <img style="width: 60%" src="../static/{{product['ProductPicUrl']}}">
+                  <h3 class="ms-5 mt-4" style="color: royalblue"> {{product['Name']}}</h3>
+                  <div class="mt-5 ms-5">
+                      <h4>{{product["ProductId"]}}</h4>
+                      <p style="font-size: 2vh">Price: {{product['Price']}} {{product['CurrencyCode']}}</p>
+                  </div>
+                  <div id="accordion">
+                      <div class="card ms-5" style="width: 50%">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none">
+                              Product Details
+                            </button>
+                          </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body mt-3">
+                              <h4 class="ms-2">{{product['Description']}}</h4>
+                                <div class="card-text ms-3" style="border: solid lightgrey;border-radius: 5px 5px 5px 5px; font-size: 2vh">
+                                    <p class="ms-5 mt-4">Category: {{product['Category']}}</p>
+                                    <hr class="ms-3 mt-4" style="height: 3px; text-align:left; margin-left: 5%; margin-right: 5%; text-decoration: solid">
+                                    <p class="ms-5 mt-4">Size (width, depth, height): {{product['Width']}}, {{product['Depth']}}, {{product['Height']}} {{product['DimUnit']}}</p>
+                                    <hr class="ms-3 mt-4" style="height: 3px; text-align:left; margin-left: 5%; margin-right: 5%; text-decoration: solid">
+                                    <p class="ms-5 mt-4">Weight: {{product['WeightMeasure']}} {{product['WeightUnit']}}</p>
+
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mt-5 ms-5">
+                      <a class="btn btn-primary" href="{{url_for('add', item=product['ProductId'])}}">Add to cart</a>
+                  </div>
+              </div>
+        {% endfor %}
+    {% endblock %}
+
+</body>
+</html>

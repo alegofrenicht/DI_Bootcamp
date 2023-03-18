@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height:500px;
+    background-image: url("img/perfect-blue3.jpg");
+    color: white;
+}
+
+.products {
+    height:500px;
+    background-image: url("https://images5.alphacoders.com/391/391688.jpg");
+    background-size: 1980px 500px;
+    color: white;
+}
+
+.cart {
+    height:500px;
+    background-image: url("https://preview.redd.it/pild3d67cyf51.jpg?width=5120&format=pjpg&auto=webp&s=a262626bae5700388b1033c4ecc5962e995c840e");
+    background-size: 1980px 500px;
+    color: white;
+}
+.p-3 > #list_one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list_one > ul  {
+    font-size: 3vh;
+    list-style: none;
+}
+
+div > #chars {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+#list_one > ul > li {
+    border: solid black;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 10px;
+}

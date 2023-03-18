@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title %}Shopping Cart{% endblock %}</title>
+</head>
+<body>
+    {% block jumbotron %}
+      <div class="cart p-5 bg-light ">
+            <h1 class="mb-3 mt-4 ms-4" style="font-size: 10vh">WELCOME TO NEW ERA</h1>
+            <p class="mb-3 mt-5 ms-5" style="font-size: 3vh">AR Electronics will save you from technological apocalypse</p>
+        </div>
+    {% endblock %}
+    {% block main %}
+    <div class="p-5 bg-dark">
+     <div class="card ms-5" style="width: 50%;">
+         <div class="card-header">
+                 <h5 class="card-body-light mb-0" style="text-decoration: none; font-size: 4vh;height: 6vh">Items</h5>
+        {% if items == [] %}
+        <div class="card-body mt-3 bg-white">
+            <p class="ms-5 mt-4" style="font-size: 6vh; height: 10vh" >Cart is empty</p>
+        </div>
+        {% else %}
+                {% for item in items %}
+                <div class="card-body bg-white mt-3">
+                      <h4 class="ms-2">{{item['Name']}}</h4>
+                      <p class="ms-3">Price:{{item['Price']}} {{item['CurrencyCode']}}</p>
+                      <a class="btn btn-primary ms-2" href="{{url_for('delete', item=item['ProductId'])}}">Remove</a>
+                </div>
+                {% endfor %}
+        {% endif %}
+         </div>
+         </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

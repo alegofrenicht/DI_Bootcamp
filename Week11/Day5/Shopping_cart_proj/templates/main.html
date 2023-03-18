@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html'%}
+    <title>{% block title%}AR Electronics{% endblock %}</title>
+</head>
+<body>
+    {% block jumbotron %}
+        <div class="main p-5 bg-light ">
+            <h1 class="mb-3 mt-4 ms-4" style="font-size: 10vh">WELCOME TO NEW ERA</h1>
+            <p class="mb-3 mt-5 ms-5" style="font-size: 3vh">AR Electronics will save you from technological apocalypse</p>
+        </div>
+    {% endblock %}
+    {% block main %}
+            <h2 class="mb-3 mt-4 ms-5" style="font-size: 7vh; color: white">About</h2>
+            <p class="mb-3 mt-4 ms-5" style="font-size: 2vh; color: white">We supply a wide range of tech products and accessories for our clients all over the world</p>
+            <div class="p-3 bg-light mt-5" style="border-style: solid">
+                <div id='list_one'>
+                    <ul class="mb-3 mt-4 ms-5">
+                        <li>Laptops</li>
+                        <li>Computers</li>
+                        <li>Phones</li>
+                    </ul>
+                    <ul class="mb-3 mt-4 ms-5">
+                        <li>Audio Equipment</li>
+                        <li>HD Monitors</li>
+                        <li>Wireless Routers</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="product_button btn btn-outline-dark mt-5 " style="width: 100%; font-size: 3vh; background-color: #485F6E" href="{{url_for('products_page')}}" >Check Out Our Products</a>
+    {% endblock%}
+
+
+</body>
+</html>

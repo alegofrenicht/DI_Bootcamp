@@ -1,4 +1,3 @@
-import flask
 from flask import Flask, render_template
 import products_data
 
@@ -39,7 +38,8 @@ def delete(item):
 
 @app.route('/cart')
 def cart():
-    html = render_template('cart.html', items=cart_items)
+    total = sum(list(map(lambda item: int(item['Price']), cart_items)))
+    html = render_template('cart.html', items=cart_items, total=total)
     return html
 
 

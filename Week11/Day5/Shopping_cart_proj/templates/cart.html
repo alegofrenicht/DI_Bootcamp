@@ -29,7 +29,10 @@
                       <a class="btn btn-primary ms-2" href="{{url_for('delete', item=item['ProductId'])}}">Remove</a>
                 </div>
                 {% endfor %}
+                <h4 class="mt-2
+                ms-2">Total: {{total}} {{items[0]['CurrencyCode']}}</h4>
         {% endif %}
+
          </div>
          </div>
     </div>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title%}Pokemons{% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+        {% for pokemon in pokemons[:20] %}
+        <img class="figure-img ms-3 mt-5" style="height: 40vh" src="{{json_func(pokemon['name'])['sprites']['front_default']}}">
+                    <div class="card-body mt-5">
+                        <a href="{{url_for('pok_by_name', pok_id=pokemon['name'])}}" class="btn btn-primary mt-2 ms-5" style="width: 15%; height: 7vh; font-size: 4vh; text-decoration: none">{{pokemon["name"].capitalize()}}</a>
+                    </div>
+        {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

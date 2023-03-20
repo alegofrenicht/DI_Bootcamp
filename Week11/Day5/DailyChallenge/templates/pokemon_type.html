@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title%}
+                {% if pokemon_type == False %}
+                    Error
+                {% else %}
+                {{pokemon_type['name'].capitalize()}} Type
+                {% endif %}
+            {% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+        {% if pokemon_type == False %}
+            <div class="card-body bg-light mt-3 ms-5" style="width: 30%">
+                        <p  class="mt-2" style="text-decoration: none; color: black; font-size: 5vh" >There is no pokemon of given type</p>
+                       </div>
+                       <a href="{{url_for('types_page')}}" class="btn btn-primary ms-5">Come back to Types</a>
+        {% else%}
+            {%  if pokemon_type['pokemon'] == [] %}
+                       <div class="card-body bg-light mt-3 ms-5" style="width: 30%">
+                        <p  class="mt-2" style="text-decoration: none; color: black; font-size: 5vh" >There is no pokemon of given type</p>
+                       </div>
+                       <a href="{{url_for('main_page')}}" class="btn btn-primary ms-5">Come back to Types</a>
+            {% else %}
+                {% for pokemon in pokemon_type['pokemon'][:10] %}
+                        <img class="figure-img ms-3 mt-5" style="height: 40vh" src="{{json_func(pokemon['pokemon']['name'])['sprites']['front_default']}}">
+                        <div class="card-body mt-5">
+                            <a href="{{url_for('pok_by_name', pok_id=pokemon['pokemon']['name'])}}" class="btn btn-primary mt-2 ms-5" style="width: 15%; height: 7vh; font-size: 4vh; text-decoration: none">{{pokemon["pokemon"]["name"].capitalize()}}</a>
+                        </div>
+                {% endfor %}
+        {% endif %}
+    {% endif %}
+
+    {% endblock %}
+</body>
+</html>

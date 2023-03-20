@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title%}
+        {% if pokemon == False %}
+            Error
+        {% else %}
+            {{pokemon['name'].capitalize()}}
+        {% endif %}
+        {% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+        {% if pokemon == False%}
+                <div class="card-body bg-light mt-3 ms-5" style="width: 30%">
+                    <p  class="mt-2" style="text-decoration: none; color: black; font-size: 5vh" >There is no pokemon of given type</p>
+                </div>
+                <a href="{{url_for('types_page')}}" class="btn btn-primary ms-5">Come back to Types</a>
+
+
+        {% else %}
+            <img class="figure-img ms-3 mt-5" style="height: 40vh" src="{{pokemon['sprites']['front_default']}}">
+            <div class="card-body bg-light ms-5 mt-5" style="width: 15%">
+                <p class="card-text mt-2 ms-2" style="width: 15%; height: 7vh; font-size: 4vh; text-decoration: none">{{pokemon['name'].capitalize()}}</p>
+            </div>
+            <a href="{{url_for('all_pokemons')}}" class="btn btn-primary ms-5">Come back to All POKEMONS </a>
+        {% endif %}
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title%}Main{% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+        {% for pokemon in pokemon_data %}
+        <div class="card-body">
+            <a class="btn btn-primary mt-3 ms-5" href="{{url_for('pokemon_type', type_id=pokemon['name'])}}" style="text-decoration: none; font-size: 3vh">{{pokemon['name'].capitalize()}}</a>
+        </div>
+        {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

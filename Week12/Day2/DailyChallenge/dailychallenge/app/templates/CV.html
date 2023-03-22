@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'main.html' %}
+    <meta charset="UTF-8">
+    <title>CV</title>
+</head>
+<body>
+    {% block main %}
+    <div class="p-5 bg-light ">
+        <h1 class="mb-3 mt-4 ms-5" style="font-size: 10vh">{{ data['firstname']}} {{data['lastname']}}</h1>
+        <p class="mb-3 ms-5" style="font-size: 6vh">{{ data['age']}} years, {{data['country']}}</p>
+    </div>
+
+    <div class="card ms-5 mt-5" style="width: 90%">
+        <div class="card-header ms-1" style="font-size: 5vh">About me</div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0 ms-5 mt-3" style="font-size: 5vh; font-family: 'Merriweather', serif">
+                <p>{{data['exp']}}...</p>
+            </blockquote>
+        </div>
+    </div>
+    {% endblock %}
+
+
+</body>
+</html>

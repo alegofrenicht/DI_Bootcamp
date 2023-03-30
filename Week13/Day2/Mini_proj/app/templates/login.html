@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Log in</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+        <h2>{{ message }}!</h2>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+    <form class="card-body bg-light ms-3 mt-5" method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="card-text ms-5" style="font-size: 3vh">{{ form.name.label }}</div>
+        <div>{{ form.name(size=32) }}</div>
+        <div class="card-text mt-5 ms-5" style="font-size: 3vh">{{ form.address_city.label }}</div>
+        <div>{{ form.address_city(size=32) }}</div>
+        <div class="mt-5" style="font-size: 3vh">{{ form.submit() }}</div>
+    </form>
+
+</body>
+</html>

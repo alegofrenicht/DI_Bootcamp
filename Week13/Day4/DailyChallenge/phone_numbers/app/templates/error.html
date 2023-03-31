@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <h2>{{ messages[-1] }}!</h2>
+  {% endif %}
+{% endwith %}
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title %}Cart{% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+    <div class="p-5 bg-dark">
+     <div class="card ms-5" style="width: 50%;">
+         <div class="card-header">
+                 <h5 class="card-body-light mb-0" style="text-decoration: none; font-size: 4vh;height: 6vh">Items</h5>
+                {% if cart %}
+                {% for pet in pets %}
+                    {% if pet.cart_id in cart %}
+                <div class="card-body bg-white mt-3">
+                    <h4 class="ms-2">{{pet.breed}} {{pet.name}}</h4>
+                    <p class="ms-3">Price:{{pet.price}}</p>
+                </div>
+                    {% endif %}
+                {% endfor %}
+             <h4 class="mt-2 ms-2">Total: {{total}}</h4>
+                {% else %}
+                <div class="card-body mt-3 bg-white">
+                    <p class="ms-5 mt-4" style="font-size: 6vh; height: 10vh">Cart is empty</p>
+                </div>
+            {% endif %}
+         </div>
+     </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

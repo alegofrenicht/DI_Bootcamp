@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'index.html' %}
+    <title>{% block title %}Pets{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        {% block main %}
+            <h2 class="ms-5 mt-4" style="color: royalblue"> {{pet.breed}} {{pet.name}}</h2>
+                  <div class="pets_frames p-5 bg-light mt-5" style="border-style: solid; width: 50vh">
+                      <img src="{{pet.image}}">
+                      <div class="text">
+                          <div class="mt-5 ms-5">
+                              <p style="font-size: 2vh">Gender: {{pet.gender}}</p>
+                              <p style="font-size: 2vh">Birth date: {{pet.date_of_birth}}</p>
+                              <p style="font-size: 2vh">Details: {{pet.details}}</p>
+                          </div>
+                          <div class="card ms-5" style="width: 30vh">
+                              <a  class="btn btn-primary" href="{{url_for('add_pet', id=pet.id)}}">
+                                  Add to cart
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

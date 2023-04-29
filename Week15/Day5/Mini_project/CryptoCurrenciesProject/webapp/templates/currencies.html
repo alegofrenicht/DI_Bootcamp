@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "index.html" %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Currencies{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+        <h1 style="color: orange">Welcome to Crypto</h1>
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes" style="list-style: none">
+                            <li class="alert alert-warning" role="alert" style="font-size: 2vh">
+                                {{ messages[-1] }}
+                            </li>
+
+                    </ul>
+                {% endif %}
+            {% endwith %}
+                    <div class="grid bg-dark">
+                        {% for currency in currencies %}
+                            <div class="currency">
+                                <button style="width: 110%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" class="btn btn-warning mt-5" type="button" data-toggle="collapse" data-target="#{{ currency.id }}" aria-expanded="false" aria-controls="{{ currency.id }}">
+                                    {{ currency.name }}
+                                </button>
+                                {% if session.logged_in %}
+                                    <a class="submit-btn btn btn-success mt-5" style="width: 30%; font-size: 3vh" href="{{url_for('add_currency', user=session.user_name, currency_id=currency.id)}}">Add</a>
+                                {% else %}
+                                    <a class="submit-btn btn btn-success mt-5" style="width: 30%; font-size: 3vh" href="{{url_for('home')}}">Add</a>
+                                {% endif %}
+                                    <div class="collapse" style="text-align: center; width: 110%" id="{{ currency.id }}">
+                                        <div class="card-text bg-white">
+                                            <div>
+                                                <br>
+                                                <p>Symbol: {{ currency.symbol }}</p>
+                                                <p>Slug: {{ currency.slug }}</p>
+                                                <p>Created in {{ currency.first_historical_data }}</p>
+                                                <p>Updated in {{ currency.last_historical_data }}</p>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endfor %}
+                    </div>
+    {% endblock %}
+</body>
+</html>
